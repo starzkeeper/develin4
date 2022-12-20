@@ -1,0 +1,12 @@
+{% extends 'vision/layout.html' %}
+{% block title %}
+{{ post.name }}
+{% endblock %}
+{% block content %}
+<h1>{{ post.name }}</h1>
+<h3>
+  description {{ post.description }} <p></p>
+  price  {{ post.price }} <p></p>
+  stock  {{ post.stock }}
+</h3>
+{% endblock %}

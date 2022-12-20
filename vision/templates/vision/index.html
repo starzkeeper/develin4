@@ -1,0 +1,17 @@
+{% extends 'vision/layout.html' %}
+{% block title %}
+Начальная страница
+{% endblock %}
+{% block content %}
+<h1 class="features"> Начальная страница</h1>
+<h1>
+    {% for el in products %}
+        <div class="alert alert-danger">
+            <p class="button button1"><a href="{% url 'detailview' el.slug %}">{{ el.name }}</a></p>
+            <p>{{ el.price }}$</p>
+        </div>
+    {% endfor %}
+
+</h1>
+{% endblock %}
+
